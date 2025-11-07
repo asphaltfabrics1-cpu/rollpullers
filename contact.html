@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | RollPullers</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header>
+        <div class="top-bar">
+          <div class="logo">RollPullers</div>
+          <button class="nav-toggle" aria-expanded="false">Menu</button>
+          <nav>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="grizzly.html">Grizzly Series</a></li>
+              <li><a href="rollpuller.html">Roll Puller™</a></li>
+              <li><a href="accessories.html">Accessories</a></li>
+              <li><a href="custom-equipment.html">Custom</a></li>
+              <li><a href="consulting.html">Consulting</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div class="hero-inner">
+            <div>
+              <h1>Let’s talk about your next install.</h1>
+              <p>
+                Whether you need a new Grizzly, Roll Puller™ tooling, upgrade kits, or a custom
+                engineering sprint, reach out and we’ll build a path forward.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section dark">
+          <div class="inner">
+            <h2>Contact information</h2>
+            <div class="two-column">
+              <div class="contact-block">
+                <strong>[Company Name]</strong>
+                <span>[Street Address]</span>
+                <span>[City, State ZIP]</span>
+                <span>[Contact Email]</span>
+                <span>[Phone]</span>
+              </div>
+              <div>
+                <p>
+                  Share your roll widths, core sizes, equipment model/year, and project timeline so
+                  we can respond with the right spec sheets or upgrade recommendations.
+                </p>
+                <p class="muted">Detailed pricing is provided upon request.</p>
+              </div>
+            </div>
+
+            <form class="contact-form" action="#" method="post">
+              <label>
+                Name
+                <input type="text" name="name" placeholder="Jane Smith" required />
+              </label>
+              <label>
+                Company
+                <input type="text" name="company" placeholder="[Company]" />
+              </label>
+              <label>
+                Email
+                <input type="email" name="email" placeholder="you@example.com" required />
+              </label>
+              <label>
+                Phone
+                <input type="tel" name="phone" placeholder="[Phone]" />
+              </label>
+              <label>
+                Project details
+                <textarea name="message" placeholder="Roll widths, core ID, equipment needs"></textarea>
+              </label>
+              <button class="btn btn-primary" type="submit">Submit inquiry</button>
+            </form>
+          </div>
+        </section>
+
+        <section class="section alt">
+          <div class="inner">
+            <h2>Need specs now?</h2>
+            <p>
+              Ask for the latest Grizzly feature sheets, Roll Puller™ quick start guide, or
+              upgrade bulletins for 2019–2024 kits.
+            </p>
+            <a class="btn btn-ghost" href="mailto:[Contact Email]">Email [Contact Email]</a>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div class="inner">
+          <div class="logo">RollPullers</div>
+          <div class="footer-meta">
+            <div class="contact-block">
+              <strong>[Company Name]</strong>
+              <span>[Street Address]</span>
+              <span>[City, State ZIP]</span>
+            </div>
+            <div class="contact-block">
+              <strong>[Contact Email]</strong>
+              <span>[Phone]</span>
+            </div>
+          </div>
+          <p class="muted">© <span id="year"></span> RollPullers · Equipment engineered for modern paving fabric installs.</p>
+        </div>
+      </footer>
+    </div>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+    <script src="assets/js/main.js" defer></script>
+  </body>
+</html>

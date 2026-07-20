@@ -3,14 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact | RollPullers</title>
+    <title>Contact | Geotextile Apparatus Company</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
   <body>
     <div class="site-shell">
       <header>
         <div class="top-bar">
-          <div class="logo">RollPullers</div>
+          <a href="index.html" class="logo">GAC <span class="accent">·</span> Roll Pullers</a>
           <button class="nav-toggle" aria-expanded="false">Menu</button>
           <nav>
             <ul class="nav-list">
@@ -20,7 +23,8 @@
               <li><a href="accessories.html">Accessories</a></li>
               <li><a href="custom-equipment.html">Custom</a></li>
               <li><a href="consulting.html">Consulting</a></li>
-              <li><a href="contact.html">Contact</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html" class="active">Contact</a></li>
             </ul>
           </nav>
         </div>
@@ -30,22 +34,23 @@
         <section class="hero">
           <div class="hero-grid">
             <div>
-              <span class="pill">Quotes · Upgrades · Consulting</span>
+              <span class="eyebrow">Quotes · Upgrades · Consulting</span>
               <h1>Let’s build your next deployment plan.</h1>
               <p>
                 Share roll widths, core sizes, equipment model/year, and schedule. We’ll respond with
                 the right spec sheets, upgrade kits, or consulting plan.
               </p>
               <div class="contact-block">
-                <strong>[Company Name]</strong>
-                <span>[Street Address]</span>
-                <span>[City, State ZIP]</span>
-                <span>[Contact Email]</span>
-                <span>[Phone]</span>
+                <strong>Geotextile Apparatus Company</strong>
+                <span>San Diego, CA</span>
+                <span>Equipment Worldwide Since 1980</span>
+                <span><a href="mailto:gacco@outlook.com">gacco@outlook.com</a></span>
+                <span>619-222-5111</span>
               </div>
               <p class="muted">Detailed pricing is provided upon request. Include bid dates or DOT spec sections if you need us to mirror them.</p>
             </div>
             <div class="hero-media">
+              <img src="assets/images/about1.jpg" alt="Contact GAC" class="hero-img">
               <h2>What to include</h2>
               <ul class="list-check">
                 <li>Roll widths and core inside diameters</li>
@@ -64,7 +69,7 @@
               <p class="lead">We respond quickly with spec sheets or next-step scheduling.</p>
             </div>
           </div>
-          <form class="contact-form" action="#" method="post">
+          <form class="contact-form" action="mailto:gacco@outlook.com" method="post" enctype="text/plain">
             <label>
               Name
               <input type="text" name="name" placeholder="Jane Smith" required />
@@ -94,7 +99,7 @@
             <div>
               <h2>Need specs immediately?</h2>
               <p>Request the latest Grizzly feature sheets, Roll Puller™ quick-start guide, or upgrade bulletins.</p>
-              <a class="btn btn-secondary" href="mailto:[Contact Email]">Email [Contact Email]</a>
+              <a class="btn btn-secondary" href="mailto:gacco@outlook.com">Email gacco@outlook.com</a>
             </div>
           </div>
         </section>
@@ -102,25 +107,55 @@
 
       <footer>
         <div class="inner">
-          <div class="logo">RollPullers</div>
-          <div class="footer-meta">
-            <div class="contact-block">
-              <strong>[Company Name]</strong>
-              <span>[Street Address]</span>
-              <span>[City, State ZIP]</span>
+          <div class="footer-grid">
+            <div>
+              <div class="footer-brand">GAC <span class="accent">·</span> Roll Pullers</div>
+              <p class="footer-tagline">
+                Geotextile Apparatus Company. Six U.S. patents. 40+ years of R&D. Equipment installing
+                fabric in 60+ countries since 1980.
+              </p>
             </div>
-            <div class="contact-block">
-              <strong>[Contact Email]</strong>
-              <span>[Phone]</span>
+            <div class="footer-col">
+              <h4>Equipment</h4>
+              <ul>
+                <li><a href="grizzly.html">Grizzly Series</a></li>
+                <li><a href="rollpuller.html">Roll Puller™</a></li>
+                <li><a href="accessories.html">Accessories & Upgrades</a></li>
+                <li><a href="custom-equipment.html">Custom Fabrication</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Company</h4>
+              <ul>
+                <li><a href="consulting.html">Consulting</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="http://www.pavingfabric.com" target="_blank" rel="noopener">pavingfabric.com</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Contact</h4>
+              <div class="footer-contact-row">
+                <span class="icon">✉</span>
+                <a href="mailto:gacco@outlook.com">gacco@outlook.com</a>
+              </div>
+              <div class="footer-contact-row">
+                <span class="icon">☎</span>
+                <a href="tel:6192225111">619-222-5111</a>
+              </div>
+              <div class="footer-contact-row">
+                <span class="icon">◆</span>
+                <span>San Diego, CA · Worldwide since 1980</span>
+              </div>
             </div>
           </div>
-          <p class="muted">© <span id="year"></span> RollPullers · Equipment engineered for modern paving fabric installs.</p>
+          <div class="footer-bottom">
+            <span>© <span id="year"></span> Geotextile Apparatus Company · Six U.S. Patents · Equipment operating in 60+ countries.</span>
+            <span>Website by <a href="https://gideoncode.com" target="_blank" rel="noopener">Gideon Codeworks</a></span>
+          </div>
         </div>
       </footer>
     </div>
-    <script>
-      document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
     <script src="assets/js/main.js" defer></script>
   </body>
 </html>

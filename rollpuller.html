@@ -3,24 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Roll Puller™ Tools | RollPullers</title>
+    <title>Roll Puller™ Tools | Geotextile Apparatus Company</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
   <body>
     <div class="site-shell">
       <header>
         <div class="top-bar">
-          <div class="logo">RollPullers</div>
+          <a href="index.html" class="logo">GAC <span class="accent">·</span> Roll Pullers</a>
           <button class="nav-toggle" aria-expanded="false">Menu</button>
           <nav>
             <ul class="nav-list">
               <li><a href="index.html">Home</a></li>
               <li><a href="grizzly.html">Grizzly Series</a></li>
-              <li><a href="rollpuller.html">Roll Puller™</a></li>
+              <li><a href="rollpuller.html" class="active">Roll Puller™</a></li>
               <li><a href="accessories.html">Accessories</a></li>
               <li><a href="custom-equipment.html">Custom</a></li>
               <li><a href="consulting.html">Consulting</a></li>
-              <li><a href="contact.html">Contact</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html" class="nav-cta">Book a demo</a></li>
             </ul>
           </nav>
         </div>
@@ -30,7 +34,7 @@
         <section class="hero">
           <div class="hero-grid">
             <div>
-              <span class="pill">Container & truck unloading</span>
+              <span class="eyebrow">Container & truck unloading</span>
               <h1>Roll Puller™ RP3XL / RP4XL</h1>
               <p>
                 Purpose-built tools that let a single operator extract geosynthetic rolls from vans,
@@ -42,6 +46,7 @@
               </div>
             </div>
             <div class="hero-media">
+              <img src="assets/images/eve8.jpg" alt="Roll Puller Tool" class="hero-img">
               <div class="hero-media-content">
                 <p class="pill">Safety stats</p>
                 <div class="stats-grid">
@@ -142,7 +147,7 @@
             <div class="cta-panel">
               <h3>Need a demonstration?</h3>
               <p>We can provide a quick-start guide or remote walkthrough tailored to your unloading setup.</p>
-              <a class="btn btn-primary" href="contact.html">Contact [Company Name]</a>
+              <a class="btn btn-primary" href="contact.html">Contact GAC at 619-222-5111</a>
             </div>
           </div>
         </section>
@@ -150,25 +155,55 @@
 
       <footer>
         <div class="inner">
-          <div class="logo">RollPullers</div>
-          <div class="footer-meta">
-            <div class="contact-block">
-              <strong>[Company Name]</strong>
-              <span>[Street Address]</span>
-              <span>[City, State ZIP]</span>
+          <div class="footer-grid">
+            <div>
+              <div class="footer-brand">GAC <span class="accent">·</span> Roll Pullers</div>
+              <p class="footer-tagline">
+                Geotextile Apparatus Company. Six U.S. patents. 40+ years of R&D. Equipment installing
+                fabric in 60+ countries since 1980.
+              </p>
             </div>
-            <div class="contact-block">
-              <strong>[Contact Email]</strong>
-              <span>[Phone]</span>
+            <div class="footer-col">
+              <h4>Equipment</h4>
+              <ul>
+                <li><a href="grizzly.html">Grizzly Series</a></li>
+                <li><a href="rollpuller.html">Roll Puller™</a></li>
+                <li><a href="accessories.html">Accessories & Upgrades</a></li>
+                <li><a href="custom-equipment.html">Custom Fabrication</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Company</h4>
+              <ul>
+                <li><a href="consulting.html">Consulting</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="http://www.pavingfabric.com" target="_blank" rel="noopener">pavingfabric.com</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Contact</h4>
+              <div class="footer-contact-row">
+                <span class="icon">✉</span>
+                <a href="mailto:gacco@outlook.com">gacco@outlook.com</a>
+              </div>
+              <div class="footer-contact-row">
+                <span class="icon">☎</span>
+                <a href="tel:6192225111">619-222-5111</a>
+              </div>
+              <div class="footer-contact-row">
+                <span class="icon">◆</span>
+                <span>San Diego, CA · Worldwide since 1980</span>
+              </div>
             </div>
           </div>
-          <p class="muted">© <span id="year"></span> RollPullers · Equipment engineered for modern paving fabric installs.</p>
+          <div class="footer-bottom">
+            <span>© <span id="year"></span> Geotextile Apparatus Company · Six U.S. Patents · Equipment operating in 60+ countries.</span>
+            <span>Website by <a href="https://gideoncode.com" target="_blank" rel="noopener">Gideon Codeworks</a></span>
+          </div>
         </div>
       </footer>
     </div>
-    <script>
-      document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
     <script src="assets/js/main.js" defer></script>
   </body>
 </html>

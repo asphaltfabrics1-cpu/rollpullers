@@ -1,6 +1,16 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    { "source": "/grizzly", "destination": "/rollpuller", "permanent": true },
+    { "source": "/grizzly.html", "destination": "/rollpuller", "permanent": true },
+    { "source": "/accessories", "destination": "/rollpuller", "permanent": true },
+    { "source": "/accessories.html", "destination": "/rollpuller", "permanent": true },
+    { "source": "/custom-equipment", "destination": "/rollpuller", "permanent": true },
+    { "source": "/custom-equipment.html", "destination": "/rollpuller", "permanent": true },
+    { "source": "/consulting", "destination": "/rollpuller", "permanent": true },
+    { "source": "/consulting.html", "destination": "/rollpuller", "permanent": true }
+  ],
   "headers": [
     {
       "source": "/assets/(.*)",

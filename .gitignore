@@ -1,3 +1,8 @@
 .DS_Store
 node_modules/
 .vercel
+
+# Source photo/video files (converted to JPG/MP4 in /assets/)
+IMG_*.HEIC
+IMG_*.MOV
+tools/new-media/

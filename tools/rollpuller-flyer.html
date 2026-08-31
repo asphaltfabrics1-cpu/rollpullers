@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Roll Puller RP3XL and RP4XL</title>
+<style>
+  @page { size: Letter; margin: 0.4in; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; font-family: -apple-system, "Helvetica Neue", Arial, sans-serif; color: #1a1a1a; }
+  body { font-size: 10pt; line-height: 1.35; }
+
+  .page {
+    width: 100%;
+    height: 10.2in;
+    display: flex; flex-direction: column;
+    page-break-after: always;
+    break-after: page;
+  }
+  .page:last-child { page-break-after: auto; break-after: auto; }
+
+  /* Header band */
+  .brand-band {
+    background: #1a1a1a; color: #fff; padding: 12px 18px;
+    display: flex; justify-content: space-between; align-items: center;
+    flex-shrink: 0;
+  }
+  .brand { font-size: 16pt; font-weight: 700; letter-spacing: 0.02em; }
+  .brand .accent { color: #e8710a; margin: 0 4px; }
+  .brand-tag { font-size: 8.5pt; opacity: 0.85; text-align: right; }
+
+  main.content { flex: 1; padding: 14px 0 0 0; }
+
+  /* Hero title */
+  .hero-title {
+    padding: 0 0 10px 0;
+    border-bottom: 3px solid #e8710a;
+    margin-bottom: 12px;
+  }
+  .hero-title h1 {
+    margin: 0 0 4px 0; font-size: 22pt; font-weight: 700; line-height: 1.05;
+    letter-spacing: -0.01em;
+  }
+  .hero-title .sub { font-size: 10.5pt; color: #555; margin: 0; }
+  .hero-title .pill {
+    display: inline-block; font-size: 7.5pt; text-transform: uppercase;
+    letter-spacing: 0.15em; color: #e8710a; font-weight: 700; margin-bottom: 4px;
+  }
+
+  /* Two-col layout */
+  .two-col { display: flex; gap: 16px; margin-bottom: 12px; }
+  .two-col > div { flex: 1; }
+
+  .hero-photo { width: 100%; height: 155px; object-fit: cover; border-radius: 3px; display: block; }
+  .photo-cap { font-size: 8pt; color: #666; margin-top: 4px; text-align: center; }
+
+  /* Spec table */
+  .spec-table {
+    width: 100%; border-collapse: collapse; margin-bottom: 12px;
+    font-size: 9.5pt;
+  }
+  .spec-table th {
+    background: #1a1a1a; color: #fff; padding: 7px 9px; text-align: left;
+    font-size: 8.5pt; text-transform: uppercase; letter-spacing: 0.05em;
+  }
+  .spec-table td { padding: 8px 9px; border-bottom: 1px solid #e5e5e5; vertical-align: top; }
+  .spec-table tr:last-child td { border-bottom: none; }
+  .spec-table .model { font-weight: 700; color: #e8710a; font-size: 11pt; }
+
+  /* Feature list */
+  .features { list-style: none; padding: 0; margin: 0 0 10px 0; }
+  .features li { padding: 4px 0 4px 18px; position: relative; line-height: 1.35; font-size: 9.5pt; }
+  .features li:before {
+    content: ""; position: absolute; left: 0; top: 10px;
+    width: 8px; height: 8px; border-radius: 50%;
+    background: #e8710a;
+  }
+  .features strong { color: #1a1a1a; }
+
+  /* Section headers */
+  h2.section {
+    font-size: 12pt; font-weight: 700; margin: 0 0 8px 0;
+    padding-bottom: 5px; border-bottom: 2px solid #1a1a1a;
+    letter-spacing: -0.01em;
+  }
+
+  /* Callout box */
+  .callout {
+    background: #f7f5f2; border-left: 4px solid #e8710a;
+    padding: 10px 12px; margin: 0 0 10px 0; font-size: 9.5pt;
+  }
+
+  /* Quote */
+  .quote {
+    font-style: italic; color: #444; padding: 6px 10px;
+    border-left: 3px solid #ccc; margin: 6px 0 8px 0;
+    font-size: 9.5pt; line-height: 1.35;
+  }
+  .quote cite { display: block; font-style: normal; font-size: 8pt; color: #888; margin-top: 3px; }
+
+  /* Safety page */
+  .safety-header {
+    background: #1a1a1a; color: #fff; padding: 12px 16px; text-align: center;
+    border-top: 4px solid #e8710a;
+    margin-bottom: 14px;
+  }
+  .safety-header h2 { margin: 0; font-size: 14pt; letter-spacing: 0.04em; }
+  .safety-header .sub { font-size: 8.5pt; opacity: 0.85; margin-top: 4px; }
+
+  .rules { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 14px; }
+  .rule {
+    border: 1px solid #ddd; padding: 10px 12px; border-radius: 3px;
+    background: #fafafa;
+  }
+  .rule .n { display: inline-block; background: #e8710a; color: #fff;
+    width: 20px; height: 20px; text-align: center; line-height: 20px; border-radius: 50%;
+    font-weight: 700; font-size: 9pt; margin-right: 6px; vertical-align: middle; }
+  .rule h3 { display: inline; font-size: 10pt; margin: 0; vertical-align: middle; }
+  .rule p { margin: 6px 0 0 0; font-size: 9pt; line-height: 1.35; color: #444; }
+
+  .config-table {
+    width: 100%; border-collapse: collapse; margin-bottom: 8px; font-size: 9.5pt;
+  }
+  .config-table th, .config-table td {
+    padding: 7px 10px; border: 1px solid #ddd; text-align: left;
+  }
+  .config-table th { background: #f7f5f2; font-weight: 600; font-size: 9pt; }
+
+  /* Footer band */
+  .footer-band {
+    background: #1a1a1a; color: #fff; padding: 12px 18px;
+    display: flex; justify-content: space-between; align-items: center;
+    flex-shrink: 0;
+    margin-top: auto;
+  }
+  .footer-band .contact { font-size: 9.5pt; }
+  .footer-band .contact strong { color: #e8710a; }
+  .footer-band .copy { font-size: 7.5pt; opacity: 0.75; text-align: right; }
+
+  p { margin: 0 0 6px 0; }
+  .small { font-size: 8pt; color: #666; }
+</style>
+</head>
+<body>
+
+<!-- =============== PAGE 1 =============== -->
+<div class="page">
+
+  <div class="brand-band">
+    <div class="brand">GAC <span class="accent">·</span> Roll Pullers</div>
+    <div class="brand-tag">
+      Geotextile Apparatus Company<br />
+      Family-owned since 1980
+    </div>
+  </div>
+
+  <main class="content">
+    <div class="hero-title">
+      <div class="pill">Patented · Made in USA</div>
+      <h1>Roll Puller™ RP3XL &amp; RP4XL</h1>
+      <p class="sub">One-operator unloading for geosynthetic rolls in vans, containers, and flatbeds.</p>
+    </div>
+
+    <div class="two-col">
+      <div>
+        <img src="../assets/images/gac-slide-rollpuller.jpg" alt="Roll Puller pulling geosynthetic rolls from a container" class="hero-photo" />
+        <div class="photo-cap">Multiple pullers unload a full container in minutes — safely, without a crew of four.</div>
+      </div>
+      <div>
+        <h2 class="section">Why Roll Pullers</h2>
+        <p>Manual unloading of geosynthetic rolls from vans and containers is where crews get hurt and rolls get damaged. The Roll Puller™ eliminates the pry-bar-and-shoulder routine.</p>
+        <ul class="features">
+          <li><strong>One operator</strong> pulls the roll — no team lift.</li>
+          <li><strong>Up to 10× faster</strong> with multiple pullers.</li>
+          <li><strong>Protects cardboard cores</strong> so rolls stay usable.</li>
+          <li><strong>Pays for itself in a few shipments.</strong></li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 class="section">Model Specifications</h2>
+    <table class="spec-table">
+      <thead>
+        <tr>
+          <th style="width: 18%;">Model</th>
+          <th style="width: 22%;">Core ID range</th>
+          <th style="width: 20%;">Min. core thickness</th>
+          <th>Best fit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="model">RP3XL</td>
+          <td>2.75" – 3.25"</td>
+          <td>0.5"</td>
+          <td>Standard paving-fabric and geotextile rolls, singly or banded in pairs and trios.</td>
+        </tr>
+        <tr>
+          <td class="model">RP4XL</td>
+          <td>3.75" – 4.50"</td>
+          <td>0.5"</td>
+          <td>Oversized geosynthetic rolls, hybrid mats, and larger cardboard cores.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="two-col">
+      <div>
+        <h2 class="section">Engineering (2016 Redesign)</h2>
+        <ul class="features">
+          <li><strong>Grabs 4" deeper</strong> into the cardboard core, multiplying its effective capacity.</li>
+          <li><strong>Patent-pending laser-cut armor plate teeth</strong> maintain grip and reduce core tearing.</li>
+          <li><strong>Forged ring, double-welded</strong> onto machined shaft steel.</li>
+          <li><strong>Handles multi-roll banded groups</strong> in one pull.</li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="section">Field Performance</h2>
+        <p class="quote">
+          "3 RP4XL Roll Pullers pulling a 75-roll tier of paving fabric in 25 banded groups of 3 rolls in one pull. I was amazed."
+          <cite>— Contractor, name withheld</cite>
+        </p>
+        <p class="small">Watch a 3-Roll Puller set pull 6 banded groups of 18 rolls: <strong>youtube.com/shorts/7l6ESZXjh4Y</strong></p>
+        <p class="small">Courtesy of US Silt &amp; Site Supply · Bow, NH 03304</p>
+      </div>
+    </div>
+
+    <div class="callout">
+      <strong>Pricing &amp; ordering:</strong> Pricing and shipping quoted on request — include quantity, model, and shipping ZIP code. Full accessory chain, hook, and O-ring systems available for complete kits.
+    </div>
+  </main>
+
+  <div class="footer-band">
+    <div class="contact">
+      <strong>Phone:</strong> 440-328-8200 &nbsp;·&nbsp;
+      <strong>Email:</strong> gacco@outlook.com &nbsp;·&nbsp;
+      <strong>Web:</strong> rollpullers.com
+    </div>
+    <div class="copy">© 1980–2026 GAC · Roll Puller™ trademark of GAC</div>
+  </div>
+</div>
+
+
+<!-- =============== PAGE 2 =============== -->
+<div class="page">
+
+  <div class="brand-band">
+    <div class="brand">GAC <span class="accent">·</span> Roll Pullers</div>
+    <div class="brand-tag">
+      Safety, Warranty &amp; Use<br />
+      Page 2 of 2
+    </div>
+  </div>
+
+  <main class="content">
+    <div class="safety-header">
+      <h2>SAFETY FIRST</h2>
+      <div class="sub">Roll Pullers do not break with proper use. Chains, cables, ropes, and slings do break.</div>
+    </div>
+
+    <div class="rules">
+      <div class="rule">
+        <span class="n">1</span><h3>Never exceed the Working Load Limit</h3>
+        <p>The WLL is less than breaking strength — that's the point. OSHA requires you stay below it, every pull.</p>
+      </div>
+      <div class="rule">
+        <span class="n">2</span><h3>Stand to the side of the truck</h3>
+        <p>Never stand behind the ropes, chains, or in line with the pull. A snapped rigging line kills.</p>
+      </div>
+      <div class="rule">
+        <span class="n">3</span><h3>Pull horizontally, not down</h3>
+        <p>Insert the puller horizontally, then lift slightly or pull level. Downward pulls tear the core wall.</p>
+      </div>
+      <div class="rule">
+        <span class="n">4</span><h3>Train every operator</h3>
+        <p>Speed and safety come from operators who understand the rig. Walk every new operator through the drill.</p>
+      </div>
+    </div>
+
+    <h2 class="section">Recommended Technique</h2>
+    <ul class="features">
+      <li>Insert horizontally until the teeth seat, then lift slightly or pull level.</li>
+      <li>Guide rolls along rails, a dolly, or a waiting forklift to prevent core drag.</li>
+      <li>For loosely wrapped rolls where cores start to pull out, use multiple Roll Pullers — one in each core — to distribute load.</li>
+      <li>Pyramided rolls can be pulled until roll weight exceeds the puller's tested capacity.</li>
+    </ul>
+
+    <h2 class="section">Rigging Configurations</h2>
+    <table class="config-table">
+      <thead>
+        <tr>
+          <th style="width: 30%;">Puller Set</th>
+          <th>Chain Configuration</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>2 Puller Set</strong></td>
+          <td>Two 6-foot chains</td>
+        </tr>
+        <tr>
+          <td><strong>3 Puller Set</strong></td>
+          <td>One 4-foot center chain + two 6-foot outer chains</td>
+        </tr>
+        <tr>
+          <td><strong>4 Puller Set</strong></td>
+          <td>Two 4-foot chains + two 6-foot chains</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="small">Chain, hooks, and O-rings sized for complete Roll Puller systems are available on request.</p>
+
+    <h2 class="section" style="margin-top: 12px;">Warranty</h2>
+    <div class="callout">
+      <strong>90-day warranty against defects</strong> from date of purchase with proper use. Full operating instructions are included with every order. Contact GAC for warranty claims, replacement parts, or additional operator training.
+    </div>
+  </main>
+
+  <div class="footer-band">
+    <div class="contact">
+      <strong>Phone:</strong> 440-328-8200 &nbsp;·&nbsp;
+      <strong>Email:</strong> gacco@outlook.com &nbsp;·&nbsp;
+      <strong>Web:</strong> rollpullers.com
+    </div>
+    <div class="copy">© 1980–2026 GAC · Roll Puller™ trademark of GAC</div>
+  </div>
+</div>
+
+</body>
+</html>

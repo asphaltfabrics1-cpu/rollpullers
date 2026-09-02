@@ -283,6 +283,23 @@ p.lead {
 .hero.light .list-check li { color: var(--slate-700); }
 .hero.light .list-check h2 { color: var(--slate-900); }
 
+/* Light-hero media: transparent cutouts float freely — kill the dark container box */
+.hero.light .hero-media {
+  background: transparent;
+  border: none;
+  padding: 0;
+  box-shadow: none;
+  border-radius: 0;
+  overflow: visible;
+}
+.hero.light .hero-img {
+  border-radius: 0;
+  margin-bottom: 0;
+  aspect-ratio: auto;
+  object-fit: contain;
+  background: transparent;
+}
+
 .hero::before {
   content: "";
   position: absolute;

@@ -2,14 +2,16 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
-    { "source": "/grizzly", "destination": "/rollpuller", "permanent": true },
-    { "source": "/grizzly.html", "destination": "/rollpuller", "permanent": true },
-    { "source": "/accessories", "destination": "/rollpuller", "permanent": true },
-    { "source": "/accessories.html", "destination": "/rollpuller", "permanent": true },
-    { "source": "/custom-equipment", "destination": "/rollpuller", "permanent": true },
-    { "source": "/custom-equipment.html", "destination": "/rollpuller", "permanent": true },
-    { "source": "/consulting", "destination": "/rollpuller", "permanent": true },
-    { "source": "/consulting.html", "destination": "/rollpuller", "permanent": true }
+    { "source": "/rollpuller", "destination": "/rp3xl", "permanent": true },
+    { "source": "/rollpuller.html", "destination": "/rp3xl", "permanent": true },
+    { "source": "/grizzly", "destination": "/rp3xl", "permanent": true },
+    { "source": "/grizzly.html", "destination": "/rp3xl", "permanent": true },
+    { "source": "/accessories", "destination": "/rp3xl", "permanent": true },
+    { "source": "/accessories.html", "destination": "/rp3xl", "permanent": true },
+    { "source": "/custom-equipment", "destination": "/rp3xl", "permanent": true },
+    { "source": "/custom-equipment.html", "destination": "/rp3xl", "permanent": true },
+    { "source": "/consulting", "destination": "/rp3xl", "permanent": true },
+    { "source": "/consulting.html", "destination": "/rp3xl", "permanent": true }
   ],
   "headers": [
     {

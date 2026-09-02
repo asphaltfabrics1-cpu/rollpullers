@@ -265,6 +265,8 @@ p.lead {
 }
 .hero.light .stats-grid .stat strong,
 .hero.light .stats-grid .stat-card strong { color: var(--slate-900); }
+.hero.light .stats-grid .stat span,
+.hero.light .stats-grid .stat-card span { color: var(--slate-600); }
 .hero.light .btn-secondary {
   background: var(--white);
   color: var(--slate-900);

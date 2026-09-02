@@ -475,7 +475,8 @@ p.lead {
 
 .section:not(.dark) .btn-secondary {
   color: var(--slate-900);
-  border-color: var(--slate-200);
+  border-color: var(--slate-700);
+  border-width: 1.5px;
 }
 .section:not(.dark) .btn-secondary:hover {
   background: var(--slate-50);

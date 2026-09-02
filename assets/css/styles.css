@@ -484,16 +484,19 @@ p.lead {
 }
 
 /* CTA panels are always dark (charcoal bg) even inside light sections —
-   force white text so the outline button doesn't disappear */
+   force white text so the outline button doesn't disappear. Uses !important
+   to defeat the .section:not(.dark) .btn-secondary override no matter what. */
+.section .cta-panel .btn-secondary,
 .cta-panel .btn-secondary {
-  color: var(--white);
-  border-color: rgba(255, 255, 255, 0.35);
-  background: transparent;
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.55) !important;
+  background: transparent !important;
 }
+.section .cta-panel .btn-secondary:hover,
 .cta-panel .btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: var(--white);
-  color: var(--white);
+  background: rgba(255, 255, 255, 0.12) !important;
+  border-color: #ffffff !important;
+  color: #ffffff !important;
 }
 
 /* --- Cards --- */

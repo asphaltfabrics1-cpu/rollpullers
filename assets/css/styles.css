@@ -483,6 +483,19 @@ p.lead {
   color: var(--orange);
 }
 
+/* CTA panels are always dark (charcoal bg) even inside light sections —
+   force white text so the outline button doesn't disappear */
+.cta-panel .btn-secondary {
+  color: var(--white);
+  border-color: rgba(255, 255, 255, 0.35);
+  background: transparent;
+}
+.cta-panel .btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--white);
+  color: var(--white);
+}
+
 /* --- Cards --- */
 .card-grid {
   max-width: var(--max-width);

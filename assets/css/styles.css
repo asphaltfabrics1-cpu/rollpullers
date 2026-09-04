@@ -1312,3 +1312,69 @@ footer .inner {
   .footer-bottom { flex-direction: column; align-items: flex-start; gap: 0.5rem; text-align: left; }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
 }
+
+/* --- FAQ items --- */
+.faq-item {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--slate-200);
+}
+.faq-item:first-of-type { border-top: 1px solid var(--slate-200); }
+.faq-item h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--slate-900);
+  margin: 0 0 0.6rem 0;
+}
+.faq-item p {
+  margin: 0;
+  color: var(--slate-700);
+  line-height: 1.6;
+}
+.faq-item p + p { margin-top: 0.6rem; }
+.faq-item a { color: var(--orange); font-weight: 600; }
+.faq-item a:hover { text-decoration: underline; }
+
+/* --- How it works line-art panels --- */
+.how-it-works {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.how-panel {
+  background: var(--white);
+  border: 1px solid var(--slate-200);
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+}
+.how-panel .step-num {
+  display: inline-block;
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  background: var(--orange);
+  color: var(--white);
+  font-weight: 700;
+  line-height: 32px;
+  margin-bottom: 1rem;
+}
+.how-panel img {
+  max-width: 100%;
+  max-height: 180px;
+  height: auto;
+  margin: 0 auto 1rem;
+  display: block;
+}
+.how-panel h3 {
+  font-size: 1rem;
+  margin: 0 0 0.5rem 0;
+  color: var(--slate-900);
+}
+.how-panel p {
+  font-size: 0.9rem;
+  color: var(--slate-700);
+  margin: 0;
+}
+@media (max-width: 768px) {
+  .how-it-works { grid-template-columns: 1fr; }
+}
